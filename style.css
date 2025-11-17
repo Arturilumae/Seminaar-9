@@ -5,10 +5,11 @@
     width: 42px;
     height: 42px;
     border: 2px solid #333;
-    border-radius: 50%;
+    border-radius: 8px;
     margin: 0 10px;
     text-decoration: none;
     background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
 }
 
 .icons a svg {
@@ -20,4 +21,8 @@ h1 {
     font-size: 72px;
     font-weight: normal;
     margin-bottom: 10px;
+}
+
+body {
+    background: #e6e6e6 url("https://www.transparenttextures.com/patterns/paper-1.png");
 }
