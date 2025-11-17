@@ -1,228 +1,160 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
     <title>Marie ilutuba</title>
 
-    <!-- font -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
     <style>
-        :root{
-            --gallery-w: 520px;
-            --gallery-h: 360px;
-            --right-w: 380px;
-            --gap: 48px;
-        }
+        * { box-sizing: border-box; }
 
-        /* --- page base --- */
-        *{box-sizing:border-box}
-        body{
-            margin:0;
+        body {
+            margin: 0;
             font-family: Georgia, serif;
-            background: #e6e6e6; /* vajadusel lisa tapeedipilt */
-            color:#111;
+            background: #e6e6e6;
         }
 
-        header{
-            text-align:center;
-            padding:36px 20px 8px;
+        /* --- HEADER VASAKUSSE --- */
+        header {
+            width: 100%;
+            padding: 25px 40px;
+            text-align: left;      /* vasak joondus */
         }
 
-        h1{
-            margin:0 0 10px;
+        header h1 {
+            margin: 0;
+            font-size: 60px;
             font-family: "Great Vibes", cursive;
-            font-size:72px;
-            line-height:0.9;
         }
 
-        nav{
-            margin-top:6px;
+        nav {
+            margin-top: 10px;
         }
 
-        nav a{
-            display:inline-block;
-            margin:0 14px;
-            padding:8px 16px;
-            border:2px solid #444;
-            border-radius:8px;
-            text-decoration:none;
-            color:#222;
-            font-weight:700;
-            background:#f6f6f6;
+        nav a {
+            display: inline-block;
+            margin-right: 20px;
+            padding: 8px 16px;
+            border: 2px solid #444;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #222;
+            font-weight: bold;
+            background: white;
         }
 
-        /* --- layout grid --- */
+        /* --- GRID KONTEINER 2 VEERUGA --- */
         .layout {
-            /* kaks veergu: galerii + parempoolne veerg (ikonide ala + all olev sisu) */
             display: grid;
-            grid-template-columns: var(--gallery-w) var(--right-w);
-            grid-template-rows: var(--gallery-h) auto;
-            grid-template-areas:
-                "gallery icons"
-                "gallery rightstack";
-            column-gap: var(--gap);
-            row-gap: 24px;
+            grid-template-columns: 520px 380px;
+            column-gap: 60px;
             justify-content: center;
-            padding: 30px 24px 80px;
-            max-width: calc(var(--gallery-w) + var(--right-w) + var(--gap) + 200px);
-            margin: 0 auto;
+            padding: 40px 20px;
         }
 
-        /* Gallery - vasakul */
+        /* --- GALERII KAST --- */
         .gallery {
-            grid-area: gallery;
-            width: var(--gallery-w);
-            height: var(--gallery-h);
+            width: 520px;
+            height: 360px;
             background: white;
             border: 3px solid #bbb;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.12);
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            font-style:italic;
-            font-size:32px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-style: italic;
+            font-size: 32px;
         }
 
-        /* Icons - paigutame need GRID-i 1. reale ja keskendame vertikaalselt (joondub galerii keskjoonega) */
+        /* --- IKONID --- */
         .icons {
-            grid-area: icons;
-            display:flex;
-            justify-content:center;
-            align-items:center;      /* see kutsub ikoonid peamise rea keskjoonele */
-            gap:18px;
-            /* lisame veidi kõrgust, et ikoonid istuksid täpselt galerii ülemise osa kohal */
-            align-self: center;      /* very important: keskenda icons vertikaalselt gallery kõrguse suhtes */
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin-bottom: 20px;
+            align-self: center; /* joondab ülevalt galerii keskjoonega */
         }
 
-        .icons a{
-            display:inline-flex;
-            width:52px;
-            height:52px;
-            border-radius:50%;
-            border:3px solid #222;
-            justify-content:center;
-            align-items:center;
-            text-decoration:none;
-            color:#111;
-            font-weight:700;
-            background:white;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+        .icons a {
+            width: 52px;
+            height: 52px;
+            border: 3px solid #222;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #111;
+            background: white;
+            font-weight: bold;
+            box-shadow: 0 2px 7px rgba(0,0,0,0.15);
         }
 
-        /* rightstack: kaardid/aadressid jms, paiknevad GRID rea 2 kohal (otse parempoolse rea all) */
-        .rightstack {
-            grid-area: rightstack;
-            display:flex;
-            flex-direction:column;
-            gap:20px;
-            align-items:center;
-        }
-
+        /* --- GOOGLE MAPS KAST --- */
         .map-box {
-            width:100%;
-            height:200px;
-            background:white;
-            border:3px solid #bbb;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            font-style:italic;
-            font-size:22px;
+            width: 100%;
+            height: 200px;
+            background: white;
+            border: 3px solid #bbb;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
-        .info {
-            width:100%;
-            background:white;
-            padding:20px;
-            border:2px solid #ccc;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            text-align:center;
-            line-height:1.6;
+        /* --- ADRESS + AJAD (ilma kastita) --- */
+        .info-text {
+            margin-top: 25px;
+            line-height: 1.7;
+            font-size: 17px;
         }
 
-        /* responsiivsus väiksematele ekraanidele */
-        @media (max-width:1000px){
-            :root{
-                --gallery-w: 420px;
-                --gallery-h: 300px;
-                --right-w: 320px;
-                --gap: 36px;
-            }
-            h1{font-size:56px}
-        }
-
-        @media (max-width:800px){
-            /* stackime vertikaalselt mobiilil */
-            .layout{
-                grid-template-columns: 1fr;
-                grid-template-rows: auto;
-                grid-template-areas:
-                    "gallery"
-                    "icons"
-                    "rightstack";
-                gap:18px;
-                padding:24px;
-            }
-            .gallery{justify-content:center}
-            .icons{align-self:center; margin-top:0}
-            .rightstack{align-items:center}
-        }
     </style>
 </head>
+
 <body>
 
 <header>
     <h1>Marie ilutuba</h1>
+
     <nav>
         <a href="hinnakiri.html">Hinnakiri</a>
         <a href="broneeri.html">Broneeri aeg</a>
     </nav>
 </header>
 
-<main class="layout">
 
-    <!-- VASAK: galerii kast (grid area "gallery") -->
-    <section class="gallery" aria-label="Galerii">
-        ** Galerii **
-    </section>
+<!-- --- PÕHI LAYOUT --- -->
+<div class="layout">
 
-    <!-- IKONID: need asuvad GRID rea 1 paremas veerus ja joonduvad vertikaalselt galerii keskele -->
-    <div class="icons" aria-hidden="false">
-        <a href="#" title="Instagram">IG</a>
-        <a href="#" title="Facebook">F</a>
-        <a href="#" title="Tumblr">T</a>
+    <!-- Vasak veerg -->
+    <div>
+        <div class="gallery">** Galerii **</div>
+
+        <div class="info-text">
+            <p><strong>Aadress:</strong><br>
+            Ilutänav 12, Tallinn</p>
+
+            <p><strong>Avamis- ja sulgemisajad:</strong><br>
+            E–R: 10:00–18:00<br>
+            L: 11:00–16:00<br>
+            P: suletud</p>
+        </div>
     </div>
 
-    <!-- PAREM all olev sisu: kaart + info (grid area "rightstack") -->
-    <aside class="rightstack" aria-label="Asukoht ja info">
-        <div class="map-box" role="region" aria-label="Google maps">
-            <!-- Näidis iframe; asenda src õige Google Maps embed URL-iga -->
-            <!-- Kui soovid, võin sulle genereerida täpse embed linki aadressi põhjal -->
-            <iframe
-                src=""
-                title="Kaart"
-                style="width:100%; height:100%; border:0;"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                allowfullscreen>
-            </iframe>
-            <!-- kui iframe src jääb tühjaks, kuvatakse ülemine valge kast; soovi korral asenda tekstiga: ** Google Maps kaart ** -->
+    <!-- Parem veerg -->
+    <div>
+
+        <div class="icons">
+            <a href="#" title="Instagram">IG</a>
+            <a href="#" title="Facebook">F</a>
+            <a href="#" title="Tumblr">T</a>
         </div>
 
-        <div class="info">
-            <p><strong>** Aadress **</strong><br>Ilutänav 12, Tallinn</p>
-
-            <p><strong>** Avamis- ja sulgemisajad **</strong><br>
-                E–R: 10:00 – 18:00<br>
-                L: 11:00 – 16:00<br>
-                P: suletud
-            </p>
+        <div class="map-box">
+            <!-- Pane siia oma Google Maps iframe -->
         </div>
-    </aside>
 
-</main>
+    </div>
+</div>
 
 </body>
 </html>
