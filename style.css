@@ -7,15 +7,15 @@ body {
 /* Ülaosa */
 header {
     display: flex;
-    justify-content: space-between; /* vasak ja parem tulp */
+    justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
 }
 
 .header-left {
     display: flex;
-    flex-direction: column;         /* h1 üleval, nav all */
-    align-items: flex-start;           /* vasakule joondatud */
+    flex-direction: column;
+    align-items: flex-start; 
 }
 
 nav {
@@ -32,7 +32,6 @@ h1 {
     font-style: italic;
 }
 
-/* Nupud */
 nav a {
     margin: 0 15px;
     padding: 8px 16px;
@@ -43,8 +42,6 @@ nav a {
     border-radius: 6px;
 }
 
-/* --- PÕHI-PAIGUTUS (tähtis) --- */
-
 .layout {
     display: flex;
     justify-content: center;
@@ -52,7 +49,6 @@ nav a {
     margin-top: 40px;
 }
 
-/* Vasak pool */
 .left-column {
     display: flex;
 }
@@ -69,19 +65,15 @@ nav a {
     font-size: 30px;
 }
 
-/* Parem tulp */
 .right-column {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    /* ⬇ Väga oluline, muidu läheb liiga üles */
     margin-top: 40px;
 }
 
-/* Sotsiaalmeedia ikoonid */
 .icons {
-    display: flex;               /* ikoonid ritta */
+    display: flex;              
     gap: 10px;   
 }
 
@@ -97,7 +89,6 @@ nav a {
     color: black;
 }
 
-/* Kaart */
 .map-box {
     width: 350px;
     height: 200px;
@@ -110,7 +101,6 @@ nav a {
     margin-bottom: 20px;
 }
 
-/* Aadress + ajad */
 .info {
     width: 350px;
     background: white;
