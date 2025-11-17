@@ -6,16 +6,16 @@ body {
 
 /* Ülaosa */
 header {
-    display: flex;                  /* header on flex konteiner */
+    display: flex;
     justify-content: space-between; /* vasak ja parem tulp */
-    align-items: center;            /* vertikaalselt joondatud */
+    align-items: center;
     padding: 20px 40px;
 }
 
 .header-left {
     display: flex;
-    flex-direction: column;         /* h1 ja nav üksteise alla */
-    align-items: flex-start;        /* vasakule joondatud */
+    flex-direction: column;         /* h1 üleval, nav all */
+    align-items: flex-start;           /* vasakule joondatud */
 }
 
 nav {
@@ -93,7 +93,6 @@ nav a {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: bold;
     text-decoration: none;
     color: black;
 }
