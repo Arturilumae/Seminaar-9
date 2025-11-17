@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="et">
-
 <head>
     <meta charset="UTF-8">
     <title>Marie ilutuba</title>
@@ -10,33 +9,22 @@
         body {
             margin: 0;
             font-family: "Georgia", serif;
-            background: #e6e6e6 url('https://via.placeholder.com/800x800?text=Taustapilt') repeat;
+            background: #e6e6e6 url('https://via.placeholder.com/800x800?text=Taustapilt') repeat; 
         }
 
-        /* Ülemine rida: pealkiri + nav vasakul, ikoonid paremal */
         header {
-            padding: 30px 40px;
+            text-align: left;
+            padding: 40px 40px 20px;
         }
 
-        .top-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        /* Pealkiri + nav vasakul */
-        .title-nav h1 {
-            margin: 0;
+        h1 {
             font-size: 48px;
             font-style: italic;
+            margin-bottom: 15px;
         }
 
-        .title-nav nav {
-            margin-top: 10px;
-        }
-
-        .title-nav a {
-            margin-right: 15px;
+        nav a {
+            margin: 0 20px 0 0;
             text-decoration: none;
             font-weight: bold;
             color: #333;
@@ -46,24 +34,10 @@
             border-radius: 6px;
         }
 
-        .title-nav a:hover {
+        nav a:hover {
             background: #ddd;
         }
 
-        /* Ikoonid paremal */
-        .header-icons a {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 40px;
-            height: 40px;
-            border: 2px solid #333;
-            border-radius: 50%;
-            margin-left: 10px;
-            text-decoration: none;
-        }
-
-        /* Põhiala */
         .container {
             display: flex;
             justify-content: center;
@@ -84,7 +58,7 @@
             align-items: center;
             font-size: 32px;
             font-style: italic;
-            box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 6px rgba(0,0,0,0.2);
         }
 
         .right-box {
@@ -96,98 +70,106 @@
         .map-box {
             background: white;
             width: 100%;
-            height: 200px;
+            height: 200px; /* väiksem kui galerii */
             border: 3px solid #bbb;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 22px;
+            font-size: 24px;
             font-style: italic;
+            box-shadow: 0 0 6px rgba(0,0,0,0.2);
             margin-bottom: 20px;
-            box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .icons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .icons a {
+            display: inline-block;
+            width: 42px;
+            height: 42px;
+            border: 2px solid #333;
+            border-radius: 50%;
+            line-height: 42px;
+            text-align: center;
+            margin: 0 10px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
         }
 
         .info {
             text-align: center;
             font-size: 16px;
             line-height: 1.6;
+            background: none;
+            border: none;
+            box-shadow: none;
         }
     </style>
 </head>
 
 <body>
 
-    <header>
-        <div class="top-row">
+<header>
+    <h1>Marie ilutuba</h1>
+    <nav>
+        <a href="hinnakiri.html">Hinnakiri</a>
+        <a href="broneeri.html">Broneeri aeg</a>
+    </nav>
+</header>
 
-            <!-- Vasak pool -->
-            <div class="title-nav">
-                <h1>Marie ilutuba</h1>
+<div class="container">
 
-                <nav>
-                    <a href="hinnakiri.html">Hinnakiri</a>
-                    <a href="broneeri.html">Broneeri aeg</a>
-                </nav>
-            </div>
-
-            <!-- Parem pool: ikoonid -->
-            <div class="header-icons">
-
-                <a href="#">
-                    <svg width="20" height="20" fill="none" stroke="black" stroke-width="2">
-                        <rect x="2" y="2" width="20" height="20" rx="5" />
-                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                    </svg>
-                </a>
-
-                <a href="#">
-                    <svg width="20" height="20" fill="none" stroke="black" stroke-width="2">
-                        <path
-                            d="M18 2h-3a4 4 0 0 0-4 4v3H8v4h3v9h4v-9h3l1-4h-4V6a1 1 0 0 1 1-1h3z" />
-                    </svg>
-                </a>
-
-                <a href="#">
-                    <svg width="20" height="20" fill="none" stroke="black" stroke-width="2">
-                        <path
-                            d="M10 2h4v4h3v4h-3v5a2 2 0 0 0 2 2h1v4h-2.5c-4 0-6.5-2.5-6.5-6.5V10H6V6h4V2z" />
-                    </svg>
-                </a>
-
-            </div>
-
-        </div>
-    </header>
-
-    <div class="container">
-
-        <!-- Galerii vasakul -->
-        <div class="gallery-box">
-            ** Galerii **
-        </div>
-
-        <!-- Parem veerg -->
-        <div class="right-box">
-
-            <div class="map-box">
-                ** Google Maps kaart **
-            </div>
-
-            <div class="info">
-                <p><strong>Aadress</strong><br>
-                    Ilutänav 12, Tallinn
-                </p>
-
-                <p><strong>Avamis- ja sulgemisajad</strong><br>
-                    E–R: 10:00 – 18:00<br>
-                    L: 11:00 – 16:00<br>
-                    P: suletud
-                </p>
-            </div>
-
-        </div>
+    <div class="gallery-box">
+        ** Galerii **  
     </div>
 
-</body>
+    <div class="right-box">
 
+        <!-- Maps (väiksem) -->
+        <div class="map-box">
+            ** Google Maps kaart **
+        </div>
+
+        <!-- Ikoonid maps all -->
+        <div class="icons">
+            <a href="#">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="5"/>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                </svg>
+            </a>
+            <a href="#">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2">
+                    <path d="M18 2h-3a4 4 0 0 0-4 4v3H8v4h3v9h4v-9h3l1-4h-4V6a1 1 0 0 1 1-1h3z"/>
+                </svg>
+            </a>
+            <a href="#">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2">
+                    <path d="M10 2h4v4h3v4h-3v5a2 2 0 0 0 2 2h1v4h-2.5c-4 0-6.5-2.5-6.5-6.5V10H6V6h4V2z"/>
+                </svg>
+            </a>
+        </div>
+
+        <!-- Info ikoonide all -->
+        <div class="info">
+            <p><strong>Aadress</strong><br>
+                Ilutänav 12, Tallinn
+            </p>
+
+            <p><strong>Avamis- ja sulgemisajad</strong><br>
+                E–R: 10:00 – 18:00<br>
+                L: 11:00 – 16:00<br>
+                P: suletud
+            </p>
+        </div>
+
+    </div>
+</div>
+
+</body>
 </html>
