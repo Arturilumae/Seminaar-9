@@ -46,6 +46,7 @@
             padding: 20px;
             max-width: 1200px;
             margin: auto;
+            position: relative;
         }
 
         .gallery-box {
@@ -84,10 +85,11 @@
 
         .icons {
             position: absolute;
-            top: 20px;       
-            right: 20px;     
-            text-align: right;
-            margin: 0;  
+            top: 20px; /* kastist kõrgemal, näiteks 20px üleval */
+            left: calc(50% + 240px); /* parempoolse kasti horisontaalne asukoht */
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px; 
         }
 
         .icons a {
