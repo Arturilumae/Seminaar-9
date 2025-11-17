@@ -1,0 +1,16 @@
+.icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    margin: 0 10px;
+    text-decoration: none;
+    background: white;
+}
+
+.icons a svg {
+    pointer-events: none;
+}
