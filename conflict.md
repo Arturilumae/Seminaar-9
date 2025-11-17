@@ -1,1 +1,1 @@
-paar rida teksti(vale)
+paar rida teksti(õige)
