@@ -6,10 +6,25 @@ body {
 
 /* Ülaosa */
 header {
-    display: flex;               /* muudab headeri flex konteineriks */
-    justify-content: space-between; /* jaotab ruumi nav ja ikoonide vahel */
-    align-items: center;         /* vertikaalne joondus keskele */
-    padding: 40px 40px 20px;
+    display: flex;                  /* header on flex konteiner */
+    justify-content: space-between; /* vasak ja parem tulp */
+    align-items: center;            /* vertikaalselt joondatud */
+    padding: 20px 40px;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;         /* h1 ja nav üksteise alla */
+    align-items: flex-start;        /* vasakule joondatud */
+}
+
+nav {
+    margin-top: 10px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
 }
 
 h1 {
