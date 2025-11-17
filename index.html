@@ -3,110 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <title>Marie ilutuba</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
     <style>
-        * { box-sizing: border-box; }
-
         body {
             margin: 0;
-            font-family: Georgia, serif;
-            background: #e6e6e6;
+            font-family: "Georgia", serif;
+            background: #e6e6e6 url('https://via.placeholder.com/800x800?text=Taustapilt') repeat; 
         }
 
-        /* --- HEADER VASAKUSSE --- */
         header {
-            width: 100%;
-            padding: 25px 40px;
-            text-align: left;      /* vasak joondus */
+            text-align: left;
+            padding: 40px 40px 20px;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 60px;
-            font-family: "Great Vibes", cursive;
-        }
-
-        nav {
-            margin-top: 10px;
+        h1 {
+            font-size: 48px;
+            font-style: italic;
+            margin-bottom: 15px;
         }
 
         nav a {
-            display: inline-block;
-            margin-right: 20px;
-            padding: 8px 16px;
-            border: 2px solid #444;
-            border-radius: 8px;
+            margin: 0 20px 0 0;
             text-decoration: none;
-            color: #222;
             font-weight: bold;
-            background: white;
+            color: #333;
+            font-size: 20px;
+            padding: 8px 14px;
+            border: 2px solid #444;
+            border-radius: 6px;
         }
 
-        /* --- GRID KONTEINER 2 VEERUGA --- */
-        .layout {
-            display: grid;
-            grid-template-columns: 520px 380px;
-            column-gap: 60px;
+        nav a:hover {
+            background: #ddd;
+        }
+
+        .container {
+            display: flex;
             justify-content: center;
-            padding: 40px 20px;
+            align-items: flex-start;
+            gap: 40px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
         }
 
-        /* --- GALERII KAST --- */
-        .gallery {
-            width: 520px;
-            height: 360px;
+        .gallery-box {
             background: white;
+            width: 480px;
+            height: 330px;
             border: 3px solid #bbb;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             display: flex;
-            align-items: center;
             justify-content: center;
-            font-style: italic;
+            align-items: center;
             font-size: 32px;
+            font-style: italic;
+            box-shadow: 0 0 6px rgba(0,0,0,0.2);
         }
 
-        /* --- IKONID --- */
-        .icons {
+        .right-box {
+            width: 360px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .map-box {
+            background: white;
+            width: 100%;
+            height: 330px; /* Sama kõrgus kui galerii */
+            border: 3px solid #bbb;
             display: flex;
             justify-content: center;
-            gap: 18px;
+            align-items: center;
+            font-size: 24px;
+            font-style: italic;
+            box-shadow: 0 0 6px rgba(0,0,0,0.2);
             margin-bottom: 20px;
-            align-self: center; /* joondab ülevalt galerii keskjoonega */
+        }
+
+        .icons {
+            text-align: center;
+            margin-bottom: 20px;
         }
 
         .icons a {
-            width: 52px;
-            height: 52px;
-            border: 3px solid #222;
+            display: inline-block;
+            width: 42px;
+            height: 42px;
+            border: 2px solid #333;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            line-height: 42px;
+            text-align: center;
+            margin: 0 10px;
             text-decoration: none;
-            color: #111;
-            background: white;
+            color: black;
             font-weight: bold;
-            box-shadow: 0 2px 7px rgba(0,0,0,0.15);
+            font-size: 18px;
         }
 
-        /* --- GOOGLE MAPS KAST --- */
-        .map-box {
-            width: 100%;
-            height: 200px;
-            background: white;
-            border: 3px solid #bbb;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        .info {
+            text-align: center;
+            font-size: 16px;
+            line-height: 1.6;
+            background: none; /* eemaldame kasti */
+            border: none;
+            box-shadow: none;
         }
-
-        /* --- ADRESS + AJAD (ilma kastita) --- */
-        .info-text {
-            margin-top: 25px;
-            line-height: 1.7;
-            font-size: 17px;
-        }
-
     </style>
 </head>
 
@@ -114,43 +116,56 @@
 
 <header>
     <h1>Marie ilutuba</h1>
-
     <nav>
         <a href="hinnakiri.html">Hinnakiri</a>
         <a href="broneeri.html">Broneeri aeg</a>
     </nav>
 </header>
 
+<div class="container">
 
-<!-- --- PÕHI LAYOUT --- -->
-<div class="layout">
-
-    <!-- Vasak veerg -->
-    <div>
-        <div class="gallery">** Galerii **</div>
-
-        <div class="info-text">
-            <p><strong>Aadress:</strong><br>
-            Ilutänav 12, Tallinn</p>
-
-            <p><strong>Avamis- ja sulgemisajad:</strong><br>
-            E–R: 10:00–18:00<br>
-            L: 11:00–16:00<br>
-            P: suletud</p>
-        </div>
+    <div class="gallery-box">
+        ** Galerii **  
     </div>
 
-    <!-- Parem veerg -->
-    <div>
+    <div class="right-box">
 
-        <div class="icons">
-            <a href="#" title="Instagram">IG</a>
-            <a href="#" title="Facebook">F</a>
-            <a href="#" title="Tumblr">T</a>
+        <!-- MAP ÜLES (sama kõrgus kui galerii) -->
+        <div class="map-box">
+            ** Google Maps kaart **
         </div>
 
-        <div class="map-box">
-            <!-- Pane siia oma Google Maps iframe -->
+        <!-- IKONNID MAP ALL -->
+        <div class="icons">
+            <a href="#">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="5"/>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                </svg>
+            </a>
+            <a href="#">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2">
+                    <path d="M18 2h-3a4 4 0 0 0-4 4v3H8v4h3v9h4v-9h3l1-4h-4V6a1 1 0 0 1 1-1h3z"/>
+                </svg>
+            </a>
+            <a href="#">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2">
+                    <path d="M10 2h4v4h3v4h-3v5a2 2 0 0 0 2 2h1v4h-2.5c-4 0-6.5-2.5-6.5-6.5V10H6V6h4V2z"/>
+                </svg>
+            </a>
+        </div>
+
+        <!-- INFO MAP ALL -->
+        <div class="info">
+            <p><strong>Aadress</strong><br>
+                Ilutänav 12, Tallinn
+            </p>
+
+            <p><strong>Avamis- ja sulgemisajad</strong><br>
+                E–R: 10:00 – 18:00<br>
+                L: 11:00 – 16:00<br>
+                P: suletud
+            </p>
         </div>
 
     </div>
